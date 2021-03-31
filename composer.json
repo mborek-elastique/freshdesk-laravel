@@ -43,5 +43,11 @@
             "url": "https://github.com/michal-borek/freshdesk-php-sdk"
         }
     },
-    "extra" : {}
+    "extra" : {
+        "laravel": {
+            "providers": [
+                "FWRD\\Laravel\\Freshdesk\\FreshdeskServiceProvider"
+            ]
+        }
+    }
 }
