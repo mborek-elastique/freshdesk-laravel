@@ -31,11 +31,11 @@ class FreshdeskServiceProvider extends ServiceProvider
             );
         });
 
-        //$this->app->alias('freshdesk', Api::class);
+        $this->app->alias('freshdesk', Api::class);
     }
 
-//    public function provides()
-//    {
-//        return ['freshdesk', Api::class];
-//    }
+    public function provides()
+    {
+        return ['freshdesk', Api::class];
+    }
 }
