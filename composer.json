@@ -22,7 +22,7 @@
         {
             "name": "Michał Borek",
             "email": "michal.borek@fwrd.eu",
-            "homepage": "http://fwrd.eu"
+            "homepage": "http://fwrd.eu/"
         }
     ],
     "minimum-stability": "dev",
