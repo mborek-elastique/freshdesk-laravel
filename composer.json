@@ -26,6 +26,7 @@
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload" : {
         "psr-4": {
             "FWRD\\Laravel\\Freshdesk\\": "src/"
