@@ -28,6 +28,7 @@ class FreshdeskServiceProvider extends ServiceProvider
             $config = $app->make('config')->get('freshdesk');
             return new Api($config['api_key'], $config['domain']);
         });
+
         $this->app->alias('freshdesk', Api::class);
     }
 
