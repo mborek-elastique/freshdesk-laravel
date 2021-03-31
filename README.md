@@ -1,23 +1,18 @@
 # Freshdesk Service Provider for Laravel 5
 
-[![Build Status](https://travis-ci.org/mpclarkson/freshdesk-laravel.svg?branch=master)](https://travis-ci.org/mpclarkson/freshdesk-laravel)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpclarkson/freshdesk-laravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpclarkson/freshdesk-laravel/?branch=master)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/9bc7be97-3ed1-4895-944e-05658edd7a4f.svg)](https://insight.sensiolabs.com/projects/9bc7be97-3ed1-4895-944e-05658edd7a4f)
-[![Packagist](https://img.shields.io/packagist/v/mpclarkson/freshdesk-php-sdk.svg)](https://packagist.org/packages/mpclarkson/freshdesk-php-sdk)
-
 This is a service provider for interacting with the Freshdesk API v2 via the 
-[freshdesk-php-sdk](https://github.com/mpclarkson/freshdesk-php-sdk) in Laravel and Lumen applications.
+[freshdesk-php-sdk](https://github.com/michal-borek/freshdesk-php-sdk) in Laravel and Lumen applications.
 
 ## Installation
 
 To add this bundle to your app, use [Composer](https://getcomposer.org).
 
-Add `mpclarkson/freshdesk-laravel` to your **composer.json** file:
+Add `michal-borek/freshdesk-laravel` to your **composer.json** file:
 
 ```json
 {
     "require": {
-        "mpclarkson/freshdesk-laravel": "dev-master"
+        "michal-borek/freshdesk-laravel": "dev-master"
     }
 }
 ```
@@ -35,7 +30,7 @@ Register the provider in the `providers` key in your `config/app.php`:
 ```php
     'providers' => array(
         // ...
-        Mpclarkson\Laravel\Freshdesk\FreshdeskServiceProvider::class,
+        FWRD\Laravel\Freshdesk\FreshdeskServiceProvider::class,
     )
 ```
 
@@ -44,7 +39,7 @@ Then add the Freshdesk facade alias in the `aliases` key in your `config/app.php
 ```php
     'aliases' => array(
         // ...
-        'Freshdesk' => Mpclarkson\Laravel\Freshdesk\FreshdeskFacade::class,
+        'Freshdesk' => FWRD\Laravel\Freshdesk\FreshdeskFacade::class,
     )
 ```
 
@@ -136,17 +131,13 @@ $tickets = Freshdesk::tickets()->view(['company_id' => $companyId]);
 Please read the Freshdesk documentation for further information on
 filtering `GET` requests.
 
-## Contributing
-
-This is a work in progress and PRs are welcome. Please read the 
-[contributing guide](.github/CONTRIBUTING.md).
-
 ## Author
 
-The library was written and maintained by [Matthew Clarkson](http://mpclarkson.github.io/) 
-from [Hilenium](https://hilenium.com).
+The library was written [Matthew Clarkson](http://mpclarkson.github.io/) 
+from [Hilenium](https://hilenium.com) then forked and adopted for Laravel 8.x
+by [Michał Borek](http://github.com/michal-borek) for [Wocozon](https://wocozon.nl).
 
 ## References
 
-* [Freshdesk PHP SDK](https://github.com/mpclarkson/freshdesk-php-sdk)
+* [Freshdesk PHP SDK](https://github.com/michal-borek/freshdesk-php-sdk)
 * [Freshdesk API Documentation](https://developer.freshdesk.com/api/)

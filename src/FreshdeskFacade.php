@@ -6,7 +6,7 @@
  * Time: 2:00 PM
  */
 
-namespace Mpclarkson\Laravel\Freshdesk;
+namespace FWRD\Laravel\Freshdesk;
 
 use Illuminate\Support\Facades\Facade;
 

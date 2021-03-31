@@ -6,7 +6,7 @@
  * Time: 5:55 PM
  */
 
-namespace Mpclarkson\Laravel\Freshdesk;
+namespace FWRD\Laravel\Freshdesk;
 
 use Freshdesk\Api as Freshdesk;
 

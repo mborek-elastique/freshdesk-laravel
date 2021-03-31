@@ -1,10 +1,10 @@
 <?php
 
-namespace Mpclarkson\Laravel\Freshdesk\Test;
+namespace FWRD\Laravel\Freshdesk\Test;
 
 use Illuminate\Support\Facades\App;
-use Mpclarkson\Laravel\Freshdesk\FreshdeskFacade as Freshdesk;
-use Mpclarkson\Laravel\Freshdesk\FreshdeskServiceProvider;
+use FWRD\Laravel\Freshdesk\FreshdeskFacade as Freshdesk;
+use FWRD\Laravel\Freshdesk\FreshdeskServiceProvider;
 use Illuminate\Container\Container;
 
 abstract class FreshdeskServiceProviderTest extends \PHPUnit_Framework_TestCase

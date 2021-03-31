@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpclarkson\Laravel\Freshdesk;
+namespace FWRD\Laravel\Freshdesk;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;
