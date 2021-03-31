@@ -25,8 +25,10 @@ class FreshdeskServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton('freshdesk', function ($app) {
-            $config = $app->make('config')->get('freshdesk');
-            return new Api($config['api_key'], $config['domain']);
+            return new Api(
+                \config('freshdesk.api_key'),
+                \config('freshdesk.domain')
+            );
         });
 
         $this->app->alias('freshdesk', Api::class);

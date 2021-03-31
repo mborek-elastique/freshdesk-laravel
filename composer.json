@@ -6,12 +6,11 @@
     "type": "laravel-package",
     "require": {
         "michal-borek/freshdesk-php-sdk": "dev-master",
-        "illuminate/support": "8.*"
+        "laravel/framework": "~7.0|~8.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
-        "phpunit/phpunit": "9.*",
-        "laravel/laravel": "8.*"
+        "phpunit/phpunit": "9.*"
     },
     "license": "MIT",
     "authors": [
