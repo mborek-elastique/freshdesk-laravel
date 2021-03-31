@@ -37,5 +37,11 @@
             "FWRD\\Laravel\\Freshdesk\\Test\\": "tests/"
         }
     },
+    "repositories": {
+        "michal-borek/freshdesk-php-sdk": {
+            "type": "vcs",
+            "url": "https://github.com/michal-borek/freshdesk-php-sdk"
+        }
+    },
     "extra" : {}
 }
