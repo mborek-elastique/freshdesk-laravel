@@ -23,44 +23,20 @@ Then run:
  composer update
  ```
 
-You must then register the provider in your application.
-
-Register the provider in the `providers` key in your `config/app.php`:
-
-```php
-    'providers' => array(
-        // ...
-        FWRD\Laravel\Freshdesk\FreshdeskServiceProvider::class,
-    )
-```
-
-Then add the Freshdesk facade alias in the `aliases` key in your `config/app.php`:
-
-```php
-    'aliases' => array(
-        // ...
-        'Freshdesk' => FWRD\Laravel\Freshdesk\FreshdeskFacade::class,
-    )
-```
-
 ## Configuration
 
 
 To customize the configuration file, publish the package configuration using Artisan.
 
 ```sh
-php artisan vendor:publish
+php artisan vendor:publish --provider="FWRD\Laravel\Freshdesk\FreshdeskServiceProvider"
 ```
 
-Update the settings in the `app/config/freshdesk.php` file.
+Set your configuration using **environment variables**, either in your `.env` file or on your server's control panel:
 
-```php
-return [
-    'api_key' => 'your_freshdesk_api_key',
-    'domain' => 'your_freshdesk_domain',
-];
-```
+- `FRESHDESK_APIKEY` - Read [this article](https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key) to find your API key.
 
+- `FRESHDESK_DOMAIN` - The subdomain part of your Freshdesk organisation URL, e.g. http://yourdomain.freshdesk.com use **yourdomain**
 
 ## Accessing the Freshdesk API
 
