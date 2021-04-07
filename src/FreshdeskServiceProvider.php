@@ -8,12 +8,12 @@ class FreshdeskServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->publishes([
+            \dirname(__DIR__) . '/config/freshdesk.php' => \config_path('freshdesk.php'),
+        ]);
+
         if ($this->app->runningInConsole()) {
-            $this->publishes(
-                [
-                    \dirname(__DIR__) . '/config/freshdesk.php' => \config_path('freshdesk.php'),
-                ]
-            );
+            //
         }
     }
 
@@ -24,17 +24,22 @@ class FreshdeskServiceProvider extends ServiceProvider
             'freshdesk'
         );
 
-        $this->app->singleton('freshdesk', function ($app) {
+        $this->app->singleton(Api::class, function ($app) {
             return new Api(
                 \config('freshdesk.api_key'),
                 \config('freshdesk.domain')
             );
         });
 
-        $this->app->alias('freshdesk', Api::class);
+        $this->app->alias(Api::class, 'freshdesk');
+
+        parent::register();
     }
 
-    public function provides()
+    /**
+     * @return string[]|array
+     */
+    public function provides(): array
     {
         return ['freshdesk', Api::class];
     }

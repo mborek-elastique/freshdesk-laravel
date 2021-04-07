@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Matthew
- * Date: 22/04/2016
- * Time: 5:55 PM
- */
 
 namespace FWRD\Laravel\Freshdesk;
 
 use Freshdesk\Api as Freshdesk;
+use Freshdesk\Exceptions\InvalidConfigurationException;
 
 class Api {
 
@@ -21,6 +16,7 @@ class Api {
      * Api constructor.
      * @param $key
      * @param $domain
+     * @throws InvalidConfigurationException
      */
     public function __construct($key, $domain)
     {

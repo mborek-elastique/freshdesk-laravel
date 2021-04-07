@@ -39,8 +39,9 @@
     },
     "repositories": {
         "michal-borek/freshdesk-php-sdk": {
-            "type": "vcs",
-            "url": "https://github.com/michal-borek/freshdesk-php-sdk"
+            "type": "github",
+            "url": "https://github.com/michal-borek/freshdesk-php-sdk",
+            "no-api": true
         }
     },
     "extra" : {
