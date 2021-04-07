@@ -1,4 +1,4 @@
-# Freshdesk Service Provider for Laravel 5
+# Freshdesk Service Provider
 
 This is a service provider for interacting with the Freshdesk API v2 via the 
 [freshdesk-php-sdk](https://github.com/michal-borek/freshdesk-php-sdk) in Laravel and Lumen applications.
